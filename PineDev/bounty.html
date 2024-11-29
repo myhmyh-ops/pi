@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>漏洞奖赏计划 - Pineapple Security</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">🍍 Pineapple Security</div>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="bounty.html">漏洞奖赏</a></li>
+            <li><a href="report.html">漏洞报告</a></li>
+        </ul>
+    </nav>
+
+    <main class="bounty-page">
+        <section class="bounty-header">
+            <h1>漏洞奖赏计划</h1>
+            <p class="subtitle">帮助我们提升安全性，获得奖励</p>
+        </section>
+
+        <section class="bounty-rules">
+            <div class="card">
+                <h2>奖励规则</h2>
+                <ul class="rule-list">
+                    <li>
+                        <span class="rule-title">漏洞确认</span>
+                        <p>所有报告的漏洞经过技术团队验证后方可获得奖励</p>
+                    </li>
+                    <li>
+                        <span class="rule-title">奖励金额</span>
+                        <p>有效漏洞奖励金额：20元</p>
+                    </li>
+                    <li>
+                        <span class="rule-title">响应时间</span>
+                        <p>我们承诺在24小时内回复您的报告</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="report-section">
+            <div class="card">
+                <h2>提交漏洞</h2>
+                <form class="report-form">
+                    <div class="form-group">
+                        <label for="title">漏洞标题</label>
+                        <input type="text" id="title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="type">漏洞类型</label>
+                        <select id="type" required>
+                            <option value="">请选择漏洞类型</option>
+                            <option value="xss">XSS跨站脚本</option>
+                            <option value="sql">SQL注入</option>
+                            <option value="csrf">CSRF跨站请求伪造</option>
+                            <option value="other">其他</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">详细描述</label>
+                        <textarea id="description" rows="6" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="poc">复现步骤</label>
+                        <textarea id="poc" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">联系邮箱</label>
+                        <input type="email" id="email" value="myh20080924@icloud.com" readonly>
+                    </div>
+
+                    <button type="submit" class="submit-btn">提交报告</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html> 

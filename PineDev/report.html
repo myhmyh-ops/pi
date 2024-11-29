@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>漏洞报告 - Pineapple Security</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">🍍 Pineapple Security</div>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="bounty.html">漏洞奖赏</a></li>
+            <li><a href="report.html">漏洞报告</a></li>
+        </ul>
+    </nav>
+
+    <main class="report-page">
+        <section class="report-header">
+            <h1>已确认的漏洞报告</h1>
+            <p class="subtitle">感谢安全研究者的贡献</p>
+        </section>
+
+        <section class="vulnerability-list">
+            <div class="vuln-card">
+                <div class="vuln-header">
+                    <span class="vuln-tag">最新</span>
+                    <h2>ice-1 Bug</h2>
+                    <span class="vuln-status">已确认</span>
+                </div>
+                
+                <div class="vuln-details">
+                    <div class="detail-item">
+                        <span class="detail-label">发现者</span>
+                        <span class="detail-value">小山 (Pineapple2群)</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">职位</span>
+                        <span class="detail-value">Pineapple软件工程师</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">奖励金额</span>
+                        <span class="detail-value reward">¥20.00</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">状态</span>
+                        <span class="detail-value status-confirmed">已奖励</span>
+                    </div>
+                </div>
+
+                <div class="vuln-description">
+                    <button class="expand-btn" onclick="toggleDescription(this)">
+                        查看详情
+                        <svg class="arrow-icon" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z"/>
+                        </svg>
+                    </button>
+                    <div class="description-content">
+                        <h3>漏洞背景</h3>
+                        <p>在一个平常的工作日，小山正在进行常规的代码审查。作为一名经验丰富的工程师，他对代码的每一行都保持着高度的敏感性。就在这时，他注意到一个看似无害的代码片段中，隐藏着一个潜在的安全隐患。</p>
+                        
+                        <h3>漏洞发现</h3>
+                        <p>小山发现的这个漏洞涉及到系统在处理用户输入时的一个微妙错误。这个错误允许攻击者通过精心构造的输入，绕过系统的安全检查，进而执行未授权的操作。由于这个漏洞的触发条件极为复杂，因此在此前的多次安全审查中都未被发现。</p>
+                        
+                        <h3>漏洞影响</h3>
+                        <p>"ice-1 Bug" 的存在可能导致系统的核心功能被恶意利用，影响用户数据的安全性。幸运的是，由于小山的及时发现和报告，Pineapple 团队迅速采取了补救措施，修复了这个漏洞，确保了用户的安全。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleDescription(button) {
+            const content = button.nextElementSibling;
+            const isExpanded = content.classList.contains('expanded');
+            
+            if (isExpanded) {
+                content.classList.remove('expanded');
+                button.classList.remove('expanded');
+            } else {
+                content.classList.add('expanded');
+                button.classList.add('expanded');
+            }
+        }
+    </script>
+</body>
+</html> 

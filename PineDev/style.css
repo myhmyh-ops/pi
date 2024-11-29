@@ -1,0 +1,402 @@
+:root {
+    --bg-color: #0a0c10;
+    --text-color: #8b949e;
+    --accent-color: #58a6ff;
+    --card-bg: #161b22;
+    --border-color: #30363d;
+    --hover-color: #2d333b;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: var(--card-bg);
+    padding: 1.2rem 2.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+nav a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width 0.2s ease;
+}
+
+nav a:hover:after {
+    width: 100%;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+.bounty-card {
+    background-color: var(--card-bg);
+    border-radius: 6px;
+    padding: 2rem;
+    margin-top: 1.5rem;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.bounty-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+
+h1 {
+    color: #e6edf3;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    color: #e6edf3;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+h3 {
+    color: #e6edf3;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+/* 添加代码块样式 */
+pre {
+    background-color: var(--card-bg);
+    border-radius: 6px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+}
+
+/* 添加按钮样式 */
+.button {
+    background-color: var(--card-bg);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    background-color: rgba(88, 166, 255, 0.1);
+}
+
+.bounty-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.bounty-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.subtitle {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.rule-list {
+    list-style: none;
+    padding: 0;
+}
+
+.rule-list li {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--accent-color);
+}
+
+.rule-title {
+    display: block;
+    color: #e6edf3;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.report-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: #e6edf3;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.8rem;
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.submit-btn {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 4px;
+    padding: 0.8rem 1.5rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .bounty-page {
+        padding: 1rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+}
+
+.report-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.report-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.vuln-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: transform 0.2s ease;
+}
+
+.vuln-card:hover {
+    transform: translateY(-2px);
+}
+
+.vuln-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.vuln-header h2 {
+    margin: 0;
+    flex-grow: 1;
+    font-size: 1.4rem;
+}
+
+.vuln-tag {
+    background-color: #1f6feb;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.vuln-status {
+    background-color: #238636;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.vuln-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.detail-label {
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.detail-value {
+    color: #e6edf3;
+    font-size: 1rem;
+}
+
+.reward {
+    color: #238636;
+    font-weight: 500;
+}
+
+.status-confirmed {
+    color: #238636;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .report-page {
+        padding: 1rem;
+    }
+    
+    .vuln-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .vuln-header {
+        flex-wrap: wrap;
+    }
+}
+
+.vuln-description {
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+}
+
+.expand-btn {
+    width: 100%;
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.8rem;
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.expand-btn:hover {
+    background-color: var(--hover-color);
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: transform 0.2s ease;
+}
+
+.expand-btn.expanded .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.description-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 1rem;
+}
+
+.description-content.expanded {
+    max-height: 2000px;
+    padding: 1.5rem 1rem;
+}
+
+.description-content h3 {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0.8rem 0;
+}
+
+.description-content h3:first-child {
+    margin-top: 0;
+}
+
+.description-content p {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+} 
